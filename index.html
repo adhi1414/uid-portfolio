@@ -3,155 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Adithyan Portfolio</title>
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      line-height: 1.6;
-      background: #f5f5f5;
-    }
-
-    header {
-      background: #111;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .about, .projects, .contact {
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      margin-bottom: 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: #333;
     }
 
-    .projects .card {
-      background: #fff;
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      margin-bottom: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd369;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #764ba2;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
       padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
-    .projects .card h3 {
-      margin-bottom: 10px;
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      transform: skewX(-25deg);
+      transition: 0.5s;
     }
 
-    .contact form {
-      display: flex;
-      flex-direction: column;
+    .card:hover::before {
+      left: 120%;
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
     }
 
     .contact input, .contact textarea {
-      margin-bottom: 15px;
+      width: 100%;
       padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
       border: 1px solid #ccc;
-      border-radius: 5px;
     }
 
     .contact button {
-      padding: 10px;
+      padding: 12px;
       border: none;
-      background: #111;
-      color: #fff;
+      background: #764ba2;
+      color: white;
+      border-radius: 8px;
       cursor: pointer;
-      border-radius: 5px;
+      transition: 0.3s;
     }
 
     .contact button:hover {
-      background: #333;
+      background: #667eea;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #111;
-      color: #fff;
+      color: white;
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>V ADITHYAN</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+  <img src="c:\Users\User\Downloads\WhatsApp Image 2026-05-05 at 9.46.04 AM.jpeg" alt="Profile Photo"> <!-- Replace with your actual photo file -->
+  <h1>V Adithyan</h1>
+  <p>Content Creator | CSE Student</p>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>Hi, I’m V Adithyan , a passionate content creator and a Computer Science student at Amrita University.
+  <div style="margin-top:10px;">
+    <a href="https://www.instagram.com/the_aaadhii?igsh=MXY4dXBkOGZ0c2l2dA%3D%3D&utm_source=qr" target="_blank" style="margin:0 10px; color:white;">Instagram</a>
+    <a href="https://www.youtube.com/@the_aaadhii" target="_blank" style="margin:0 10px; color:white;">YouTube</a>
+  </div>
 
-I specialize in photography and videography, focusing on capturing real moments and turning them into visually engaging stories. My work blends creativity with technical precision, combining cinematic visuals, clean editing, and strong storytelling.
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-Whether it’s travel, lifestyle, or everyday moments, I aim to create content that feels authentic and impactful. Alongside my studies in Computer Science, I continue to explore new ideas, improve my craft, and push my creative boundaries.
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Hi, I’m V Adithyan, a passionate content creator and a Computer Science student at Amrita University.
+    I specialize in photography and videography, focusing on cinematic storytelling and creative visuals.
+  </p>
+</section>
 
-    </p>
-  </section>
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
 
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
     <div class="card">
-      <h3>Project 1</h3>
-      <p>A cinematic travel video capturing landscapes, street life, and local culture. Focused on storytelling through smooth transitions, color grading, and natural lighting to create an immersive visual experience.
-.</p>
+      <img src="c:\Users\User\Pictures\photo-1640903581708-8d491706515b.avif" style="width:100%; border-radius:10px; margin-bottom:10px;">
+      <h3>Travel Video</h3>
+      <p>Cinematic travel storytelling with smooth transitions and color grading.</p>
     </div>
+
     <div class="card">
-      <h3>Project 2</h3>
-      <p>A creative photography series highlighting portraits and lifestyle moments. Emphasizes composition, lighting, and mood to produce visually engaging and professional-quality images.
-</p>
+      <img src="c:\Users\User\Pictures\photo-1648911130010-d410dfe8c0e1.avif" style="width:100%; border-radius:10px; margin-bottom:10px;">
+      <h3>Photography Series</h3>
+      <p>Creative portraits and lifestyle shots with strong composition.</p>
     </div>
-  </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="email" required>
-      <textarea rows="5" placeholder="phone Number" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>V ADITHYAN. All rights reserved.</p>
-  </footer>
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <form onsubmit="return handleSubmit()">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <textarea id="message" rows="5" placeholder="Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 V Adithyan</p>
+</footer>
+
+<script>
+  function handleSubmit() {
+    const name = document.getElementById("name").value;
+    alert("Thank you " + name + "! Your message has been sent.");
+    return false;
+  }
+</script>
 
 </body>
 </html>
